@@ -1,0 +1,190 @@
+country,weo_country_code,country_name
+afg,512,Afghanistan
+alb,914,Albania
+dza,612,Algeria
+ago,614,Angola
+atg,311,Antigua and Barbuda
+arg,213,Argentina
+arm,911,Armenia
+aus,193,Australia
+aut,122,Austria
+aze,912,Azerbaijan
+bhs,313,The Bahamas
+bhr,419,Bahrain
+bgd,513,Bangladesh
+brb,316,Barbados
+blr,913,Belarus
+bel,124,Belgium
+blz,339,Belize
+ben,638,Benin
+btn,514,Bhutan
+bol,218,Bolivia
+bih,963,Bosnia and Herzegovina
+bwa,616,Botswana
+bra,223,Brazil
+brn,516,Brunei Darussalam
+bgr,918,Bulgaria
+bfa,748,Burkina Faso
+bdi,618,Burundi
+cpv,624,Cabo Verde
+khm,522,Cambodia
+cmr,622,Cameroon
+can,156,Canada
+caf,626,Central African Republic
+tcd,628,Chad
+chl,228,Chile
+chn,924,China
+col,233,Colombia
+com,632,Comoros
+cod,636,Democratic Republic of the Congo
+cog,634,Republic of Congo
+cri,238,Costa Rica
+civ,662,C�te d'Ivoire
+hrv,960,Croatia
+cyp,423,Cyprus
+cze,935,Czech Republic
+dnk,128,Denmark
+dji,611,Djibouti
+dma,321,Dominica
+dom,243,Dominican Republic
+ecu,248,Ecuador
+egy,469,Egypt
+slv,253,El Salvador
+gnq,642,Equatorial Guinea
+eri,643,Eritrea
+est,939,Estonia
+eth,644,Ethiopia
+fji,819,Fiji
+fin,172,Finland
+fra,132,France
+gab,646,Gabon
+gmb,648,The Gambia
+geo,915,Georgia
+deu,134,Germany
+gha,652,Ghana
+grc,174,Greece
+grd,328,Grenada
+gtm,258,Guatemala
+gin,656,Guinea
+gnb,654,Guinea-Bissau
+guy,336,Guyana
+hti,263,Haiti
+hnd,268,Honduras
+hkg,532,Hong Kong SAR
+hun,944,Hungary
+isl,176,Iceland
+ind,534,India
+idn,536,Indonesia
+irn,429,Islamic Republic of Iran
+irq,433,Iraq
+irl,178,Ireland
+isr,436,Israel
+ita,136,Italy
+jam,343,Jamaica
+jpn,158,Japan
+jor,439,Jordan
+kaz,916,Kazakhstan
+ken,664,Kenya
+kir,826,Kiribati
+kor,542,Korea
+uvk,967,Kosovo
+kwt,443,Kuwait
+kgz,917,Kyrgyz Republic
+lao,544,Lao P.D.R.
+lva,941,Latvia
+lbn,446,Lebanon
+lso,666,Lesotho
+lbr,668,Liberia
+lby,672,Libya
+ltu,946,Lithuania
+lux,137,Luxembourg
+mkd,962,FYR Macedonia
+mdg,674,Madagascar
+mwi,676,Malawi
+mys,548,Malaysia
+mdv,556,Maldives
+mli,678,Mali
+mlt,181,Malta
+mhl,867,Marshall Islands
+mrt,682,Mauritania
+mus,684,Mauritius
+mex,273,Mexico
+fsm,868,Micronesia
+mda,921,Moldova
+mng,948,Mongolia
+mne,943,Montenegro
+mar,686,Morocco
+moz,688,Mozambique
+mmr,518,Myanmar
+nam,728,Namibia
+npl,558,Nepal
+nld,138,Netherlands
+nzl,196,New Zealand
+nic,278,Nicaragua
+ner,692,Niger
+nga,694,Nigeria
+nor,142,Norway
+omn,449,Oman
+pak,564,Pakistan
+plw,565,Palau
+pan,283,Panama
+png,853,Papua New Guinea
+pry,288,Paraguay
+per,293,Peru
+phl,566,Philippines
+pol,964,Poland
+prt,182,Portugal
+qat,453,Qatar
+rou,968,Romania
+rus,922,Russia
+rwa,714,Rwanda
+wsm,862,Samoa
+smr,135,San Marino
+stp,716,S�o Tom� and Pr�ncipe
+sau,456,Saudi Arabia
+sen,722,Senegal
+srb,942,Serbia
+syc,718,Seychelles
+sle,724,Sierra Leone
+sgp,576,Singapore
+svk,936,Slovak Republic
+svn,961,Slovenia
+slb,813,Solomon Islands
+zaf,199,South Africa
+ssd,733,South Sudan
+esp,184,Spain
+lka,524,Sri Lanka
+kna,361,St. Kitts and Nevis
+lca,362,St. Lucia
+vct,364,St. Vincent and the Grenadines
+sdn,732,Sudan
+sur,366,Suriname
+swz,734,Swaziland
+swe,144,Sweden
+che,146,Switzerland
+syr,463,Syria
+twn,528,Taiwan Province of China
+tjk,923,Tajikistan
+tza,738,Tanzania
+tha,578,Thailand
+tls,537,Timor-Leste
+tgo,742,Togo
+ton,866,Tonga
+tto,369,Trinidad and Tobago
+tun,744,Tunisia
+tur,186,Turkey
+tkm,925,Turkmenistan
+tuv,869,Tuvalu
+uga,746,Uganda
+ukr,926,Ukraine
+are,466,United Arab Emirates
+gbr,112,United Kingdom
+usa,111,United States
+ury,298,Uruguay
+uzb,927,Uzbekistan
+vut,846,Vanuatu
+ven,299,Venezuela
+vnm,582,Vietnam
+yem,474,Yemen
+zmb,754,Zambia
+zwe,698,Zimbabwe

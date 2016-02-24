@@ -1,0 +1,12 @@
+concept,name,type,domain,drillups
+weo_country_code,WEO Country Code,string,,
+country,Country,entity_domain,,
+weo_subject_code,WEO Subject Code,string,,
+country_name,Country Name,string,,
+subject_descriptor,Subject Descriptor,string,,
+subject_notes,Subject Notes,string,,
+unit,Unit,entity_domain,,
+scale,Scale,entity_domain,,
+country_series_specific_notes,Country/Series-specific Notes,string,,
+estimates_start_after,Estimates Start After,time,,
+year,year,time,,
