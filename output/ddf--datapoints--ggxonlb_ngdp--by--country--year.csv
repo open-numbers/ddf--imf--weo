@@ -452,7 +452,6 @@ year,country,ggxonlb_ngdp
 2012,blz,1.296
 2013,blz,0.756
 2014,blz,0.054
-2015,blz,--
 2016,blz,0.400
 2017,blz,0.800
 2018,blz,1.000
@@ -474,7 +473,6 @@ year,country,ggxonlb_ngdp
 2003,ben,-1.013
 2004,ben,-0.334
 2005,ben,-1.994
-2006,ben,--
 2007,ben,1.927
 2008,ben,0.288
 2009,ben,-2.799
@@ -4063,7 +4061,6 @@ year,country,ggxonlb_ngdp
 2016,svn,-0.305
 2017,svn,-0.118
 2018,svn,0.007
-2019,svn,--
 2020,svn,-0.013
 2000,slb,-1.497
 2001,slb,-0.919
