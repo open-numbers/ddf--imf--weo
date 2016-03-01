@@ -158,23 +158,19 @@ def extract_datapoints_country_year(data):
     for subject in data['WEO Subject Code'].unique():
 
         headers_datapoints = ['year', 'country', subject.lower()]
-        datapoints = []
 
-        for country in data['ISO'].unique():
-            data_ser = data[(data['ISO'] == country) & (data['WEO Subject Code'] == subject)]
-            data_ser = data_ser.loc[:, '1980':'2020'].T
+        data_subj = data[data['WEO Subject Code'] == subject]
 
-            data_ser.columns = [subject]
-            data_ser['country'] = country
-            data_ser['country'] = data_ser['country'].str.lower()
+        data_subj = data_subj.set_index('ISO')
+        data_subj = data_subj.T['1980':'2020']
+        data_subj = data_subj.unstack().reset_index().dropna()
 
-            # remove missing data and make 'country' at first
-            datapoints.append(data_ser.dropna().iloc[:, ::-1])
+        data_subj = data_subj.iloc[:, [1, 0, 2]]  # rearrange columns
+        data_subj.columns = headers_datapoints
 
-        df = pd.concat(datapoints)
-        df = df.reset_index() # adding back the 'year' column
-        df.columns = headers_datapoints
-        res[subject.lower()] = df
+        data_subj['country'] = data_subj['country'].apply(to_concept_id)
+
+        res[subject.lower()] = data_subj
 
     return res
 
