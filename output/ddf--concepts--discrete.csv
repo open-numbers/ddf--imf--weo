@@ -1,4 +1,4 @@
-concept,name,type,domain,drillups
+concept,name,concept_type,domain,drillups
 weo_country_code,WEO Country Code,string,,
 country,Country,entity_domain,,
 weo_subject_code,WEO Subject Code,string,,

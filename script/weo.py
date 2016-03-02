@@ -23,7 +23,7 @@ def extract_concepts_continuous(data):
     '''extract the continous concepts'''
 
     # headers for data frame and csv output
-    headers_continuous = ['concept', 'type', 'weo_subject_code', 'subject_descriptor',
+    headers_continuous = ['concept', 'concept_type', 'weo_subject_code', 'subject_descriptor',
                       'subject_notes', 'unit', 'scale', 'domain']
 
     # the continuous concepts in WEO data are represented by a 'WEO subject code'
@@ -33,7 +33,7 @@ def extract_concepts_continuous(data):
     concepts_continuous_df = pd.DataFrame([], columns=headers_continuous)
     concepts_continuous_df['weo_subject_code'] = concepts_continuous
     concepts_continuous_df['concept'] = concepts_continuous_df['weo_subject_code'].apply(to_concept_id)
-    concepts_continuous_df['type'] = 'measure'
+    concepts_continuous_df['concept_type'] = 'measure'
     # for one weo subject, there is only one unit/scale/subject notes/subject descriptor.
     # so calling unique()[0] to get that.
     concepts_continuous_df['subject_descriptor'] = [
@@ -56,7 +56,7 @@ def extract_concepts_discrete(data):
     '''extract the continous concepts'''
 
     # headers for data frame and csv output
-    headers_discrete = ['concept', 'name', 'type', 'domain', 'drillups']
+    headers_discrete = ['concept', 'name', 'concept_type', 'domain', 'drillups']
 
     # because the columns contains all datapoints (from '1980' to '2020')
     # so we should remove them from discrete concepts
@@ -87,7 +87,7 @@ def extract_concepts_discrete(data):
     concepts_discrete_df['name'] = discrete
     concepts_discrete_df['concept'] = concepts_discrete_df['name'].apply(to_concept_id)
 
-    concepts_discrete_df['type'] = ['string', 'entity_domain', 'string',
+    concepts_discrete_df['concept_type'] = ['string', 'entity_domain', 'string',
                                'string', 'string', 'string', 'entity_domain',
                                 'entity_domain', 'string', 'time', 'time'
                                ]
