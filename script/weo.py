@@ -37,17 +37,17 @@ def extract_concepts_continuous(data):
     # for one weo subject, there is only one unit/scale/subject notes/subject descriptor.
     # so calling unique()[0] to get that.
     concepts_continuous_df['subject_descriptor'] = [
-        data[data['WEO Subject Code'] == x]['Subject Descriptor'].unique()[0] \
-            for x in concepts_continuous_df['weo_subject_code']]
+        data[data['WEO Subject Code'] == x]['Subject Descriptor'].unique()[0]
+        for x in concepts_continuous_df['weo_subject_code']]
     concepts_continuous_df['subject_notes'] = [
-        data[data['WEO Subject Code'] == x]['Subject Notes'].unique()[0] \
-            for x in concepts_continuous_df['weo_subject_code']]
+        data[data['WEO Subject Code'] == x]['Subject Notes'].unique()[0]
+        for x in concepts_continuous_df['weo_subject_code']]
     concepts_continuous_df['unit'] = [
-        data[data['WEO Subject Code'] == x]['Units'].unique()[0] \
-            for x in concepts_continuous_df['weo_subject_code']]
+        data[data['WEO Subject Code'] == x]['Units'].unique()[0]
+        for x in concepts_continuous_df['weo_subject_code']]
     concepts_continuous_df['scale'] = [
-        data[data['WEO Subject Code'] == x]['Scale'].unique()[0] \
-            for x in concepts_continuous_df['weo_subject_code']]
+        data[data['WEO Subject Code'] == x]['Scale'].unique()[0]
+        for x in concepts_continuous_df['weo_subject_code']]
 
     return concepts_continuous_df
 
