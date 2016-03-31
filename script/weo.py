@@ -66,7 +66,7 @@ def extract_concepts_discrete(data):
     y1 = discrete.get_loc('1980')
     y2 = discrete.get_loc('2020')
 
-    discrete = np.concatenate([discrete[:y1], discrete[y2+1:], ['year']])
+    discrete = np.concatenate([discrete[:y1], discrete[y2+1:], ['Year', 'Name', 'Link']])
 
     # now the discrete concepts are:
     # array(['WEO Country Code', 'ISO', 'WEO Subject Code', 'Country',
@@ -88,9 +88,10 @@ def extract_concepts_discrete(data):
     concepts_discrete_df['concept'] = concepts_discrete_df['name'].apply(to_concept_id)
 
     concepts_discrete_df['concept_type'] = ['string', 'entity_domain', 'string',
-                               'string', 'string', 'string', 'entity_domain',
-                                'entity_domain', 'string', 'time', 'time'
-                               ]
+                                            'string', 'string', 'string', 'entity_domain',
+                                            'entity_domain', 'string', 'time', 'time',
+                                            'string', 'string'
+                                            ]
 
     return concepts_discrete_df
 
