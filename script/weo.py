@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import os
 import re
+from index import create_index_file
 
 # configuration of file paths
 source = '../source/WEOApr2015all.xls'  # despite its name, it's actually a tabbed csv file.
@@ -75,7 +76,7 @@ def extract_concepts_discrete(data):
 
     # As noted by Jasper, we should name the entity domain as singular noun.
     # but we have 'Units' in the columns from WEO data. So I manually set this
-    # here ntil I find a better solution.
+    # here until I find a better solution.
     discrete[6] = 'Unit'
 
     # also change some of country related columns for consistency
@@ -232,3 +233,6 @@ if __name__ == '__main__':
     # the float_format is work around for the problem that pandas will output
     # the year like 2013.0 in the csv file.
     notes.to_csv(path, index=False, float_format='%.0f')
+
+    print('generating index file...')
+    create_index_file(output_dir, os.path.join(output_dir, 'ddf--index.csv'))
