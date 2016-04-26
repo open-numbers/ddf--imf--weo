@@ -11,7 +11,7 @@ from index import create_index_file
 
 # configuration of file paths
 source = '../source/WEOApr2015all.xls'  # despite its name, it's actually a tabbed csv file.
-output_dir = '../output/'        # output dir
+output_dir = '../../'        # output dir
 
 
 # functions for building DDF
