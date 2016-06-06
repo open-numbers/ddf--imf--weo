@@ -196,7 +196,8 @@ def extract_special_notes(data):
 if __name__ == '__main__':
 
     print('reading source file...')
-    data = pd.read_csv(source, sep='\t', skip_footer=2, na_values=['n/a', '--'], engine='python')
+    data = pd.read_csv(source, sep='\t', skip_footer=2, thousands=',',
+                       na_values=['n/a', '--'], engine='python')
 
     print('creating concepts ddf file...')
     concept_continuous = extract_concepts_continuous(data)
