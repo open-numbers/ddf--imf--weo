@@ -7,17 +7,13 @@ import pandas as pd
 import numpy as np
 import os
 import re
-from index import create_index_file
+from ddf_utils.str import to_concept_id
+from ddf_utils.package import create_datapackage
+
 
 # configuration of file paths
-source = '../source/WEOApr2015all.xls'  # despite its name, it's actually a tabbed csv file.
+source = '../source/WEOApr2019all.xls'  # despite its name, it's actually a tabbed csv file.
 output_dir = '../../'        # output dir
-
-
-# functions for building DDF
-def to_concept_id(s):
-    '''convert a string to lowercase alphanumeric + underscore id for concepts'''
-    return re.sub(r'[/ -\.]+', '_', s).lower()
 
 
 def extract_concepts_continuous(data):
@@ -65,7 +61,7 @@ def extract_concepts_discrete(data):
 
     # you may need to change these 2 lines to match the time range
     y1 = discrete.get_loc('1980')
-    y2 = discrete.get_loc('2020')
+    y2 = discrete.get_loc('2024')
 
     discrete = np.concatenate([discrete[:y1], discrete[y2+1:], ['Year', 'Name', 'Link']])
 
@@ -164,7 +160,7 @@ def extract_datapoints_country_year(data):
         data_subj = data[data['WEO Subject Code'] == subject]
 
         data_subj = data_subj.set_index('ISO')
-        data_subj = data_subj.T['1980':'2020']
+        data_subj = data_subj.T['1980':'2024']
         data_subj = data_subj.unstack().reset_index().dropna()
 
         data_subj = data_subj.iloc[:, [1, 0, 2]]  # rearrange columns
@@ -196,7 +192,7 @@ def extract_special_notes(data):
 if __name__ == '__main__':
 
     print('reading source file...')
-    data = pd.read_csv(source, sep='\t', skip_footer=2, thousands=',',
+    data = pd.read_csv(source, sep='\t', skipfooter=2, thousands=',',
                        na_values=['n/a', '--'], engine='python')
 
     print('creating concepts ddf file...')
@@ -235,5 +231,5 @@ if __name__ == '__main__':
     # the year like 2013.0 in the csv file.
     notes.to_csv(path, index=False, float_format='%.0f')
 
-    print('generating index file...')
-    create_index_file(output_dir, os.path.join(output_dir, 'ddf--index.csv'))
+    # print('generating index file...')
+    # create_index_file(output_dir, os.path.join(output_dir, 'ddf--index.csv'))
