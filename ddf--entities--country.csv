@@ -6,6 +6,7 @@ ago,614,Angola
 atg,311,Antigua and Barbuda
 arg,213,Argentina
 arm,911,Armenia
+abw,314,Aruba
 aus,193,Australia
 aut,122,Austria
 aze,912,Azerbaijan
@@ -53,6 +54,7 @@ slv,253,El Salvador
 gnq,642,Equatorial Guinea
 eri,643,Eritrea
 est,939,Estonia
+swz,734,Eswatini
 eth,644,Ethiopia
 fji,819,Fiji
 fin,172,Finland
@@ -98,7 +100,7 @@ lbr,668,Liberia
 lby,672,Libya
 ltu,946,Lithuania
 lux,137,Luxembourg
-mkd,962,FYR Macedonia
+mac,546,Macao SAR
 mdg,674,Madagascar
 mwi,676,Malawi
 mys,548,Malaysia
@@ -117,12 +119,14 @@ mar,686,Morocco
 moz,688,Mozambique
 mmr,518,Myanmar
 nam,728,Namibia
+nru,836,Nauru
 npl,558,Nepal
 nld,138,Netherlands
 nzl,196,New Zealand
 nic,278,Nicaragua
 ner,692,Niger
 nga,694,Nigeria
+mkd,962,North Macedonia
 nor,142,Norway
 omn,449,Oman
 pak,564,Pakistan
@@ -134,6 +138,7 @@ per,293,Peru
 phl,566,Philippines
 pol,964,Poland
 prt,182,Portugal
+pri,359,Puerto Rico
 qat,453,Qatar
 rou,968,Romania
 rus,922,Russia
@@ -150,6 +155,7 @@ sgp,576,Singapore
 svk,936,Slovak Republic
 svn,961,Slovenia
 slb,813,Solomon Islands
+som,726,Somalia
 zaf,199,South Africa
 ssd,733,South Sudan
 esp,184,Spain
@@ -159,7 +165,6 @@ lca,362,St. Lucia
 vct,364,St. Vincent and the Grenadines
 sdn,732,Sudan
 sur,366,Suriname
-swz,734,Swaziland
 swe,144,Sweden
 che,146,Switzerland
 syr,463,Syria
