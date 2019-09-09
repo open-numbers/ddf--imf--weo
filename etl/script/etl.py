@@ -21,7 +21,7 @@ def extract_concepts_continuous(data):
 
     # headers for data frame and csv output
     headers_continuous = ['concept', 'concept_type', 'weo_subject_code', 'subject_descriptor',
-                      'subject_notes', 'unit', 'scale', 'domain']
+                          'subject_notes', 'unit', 'scale', 'domain']
 
     # the continuous concepts in WEO data are represented by a 'WEO subject code'
     concepts_continuous = data['WEO Subject Code'].unique()
@@ -63,12 +63,12 @@ def extract_concepts_discrete(data):
     y1 = discrete.get_loc('1980')
     y2 = discrete.get_loc('2024')
 
-    discrete = np.concatenate([discrete[:y1], discrete[y2+1:], ['Year', 'Name', 'Link']])
+    discrete = np.concatenate([discrete[:y1], discrete[y2+1:], ['Year', 'Name', 'Link']]).tolist()
 
     # now the discrete concepts are:
-    # array(['WEO Country Code', 'ISO', 'WEO Subject Code', 'Country',
+    # ['WEO Country Code', 'ISO', 'WEO Subject Code', 'Country',
     #  'Subject Descriptor', 'Subject Notes', 'Units', 'Scale',
-    #   'Country/Series-specific Notes', 'Estimates Start After', 'year']
+    #  'Country/Series-specific Notes', 'Estimates Start After', 'year']
 
     # As noted by Jasper, we should name the entity domain as singular noun.
     # but we have 'Units' in the columns from WEO data. So I manually set this
@@ -79,6 +79,10 @@ def extract_concepts_discrete(data):
     discrete[1] = 'Country'
     discrete[3] = 'Country Name'
 
+    # some more descrete concepts
+    discrete.append('Domain')
+    discrete.append('Drillups')
+
     # build data frame
     concepts_discrete_df = pd.DataFrame([], columns=headers_discrete)
     concepts_discrete_df['name'] = discrete
@@ -87,7 +91,7 @@ def extract_concepts_discrete(data):
     concepts_discrete_df['concept_type'] = ['string', 'entity_domain', 'string',
                                             'string', 'string', 'string', 'entity_domain',
                                             'entity_domain', 'string', 'time', 'time',
-                                            'string', 'string'
+                                            'string', 'string', 'string', 'string'
                                             ]
 
     return concepts_discrete_df
