@@ -1,13 +1,9 @@
 {
-    "name": "ddf--imf--weo",
     "language": {
-        "id": "en"
+        "name": "English",
+        "id": "en-US"
     },
-    "title": "ddf--imf--weo",
-    "description": "",
-    "author": "",
-    "license": "",
-    "created": "2019-09-09T06:08:37.898530+00:00",
+    "created": "2024-08-20T03:14:07.839Z",
     "resources": [
         {
             "name": "ddf--concepts--continuous",
@@ -39,7 +35,9 @@
                         "name": "domain"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
             }
         },
         {
@@ -63,7 +61,69 @@
                         "name": "drillups"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--country",
+            "path": "ddf--entities--country.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "weo_country_code"
+                    },
+                    {
+                        "name": "country_name"
+                    }
+                ],
+                "primaryKey": [
+                    "country"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--scale",
+            "path": "ddf--entities--scale.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "scale"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "link"
+                    }
+                ],
+                "primaryKey": [
+                    "scale"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--unit",
+            "path": "ddf--entities--unit.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "unit"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "link"
+                    }
+                ],
+                "primaryKey": [
+                    "unit"
+                ]
             }
         },
         {
@@ -1010,60 +1070,6 @@
                     "year"
                 ]
             }
-        },
-        {
-            "name": "ddf--entities--country",
-            "path": "ddf--entities--country.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "country"
-                    },
-                    {
-                        "name": "weo_country_code"
-                    },
-                    {
-                        "name": "country_name"
-                    }
-                ],
-                "primaryKey": "country"
-            }
-        },
-        {
-            "name": "ddf--entities--scale",
-            "path": "ddf--entities--scale.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "scale"
-                    },
-                    {
-                        "name": "name"
-                    },
-                    {
-                        "name": "link"
-                    }
-                ],
-                "primaryKey": "scale"
-            }
-        },
-        {
-            "name": "ddf--entities--unit",
-            "path": "ddf--entities--unit.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "unit"
-                    },
-                    {
-                        "name": "name"
-                    },
-                    {
-                        "name": "link"
-                    }
-                ],
-                "primaryKey": "unit"
-            }
         }
     ],
     "ddfSchema": {
@@ -1074,8 +1080,8 @@
                 ],
                 "value": "concept_type",
                 "resources": [
-                    "ddf--concepts--continuous",
-                    "ddf--concepts--discrete"
+                    "ddf--concepts--discrete",
+                    "ddf--concepts--continuous"
                 ]
             },
             {
@@ -1084,8 +1090,8 @@
                 ],
                 "value": "domain",
                 "resources": [
-                    "ddf--concepts--continuous",
-                    "ddf--concepts--discrete"
+                    "ddf--concepts--discrete",
+                    "ddf--concepts--continuous"
                 ]
             },
             {
@@ -1164,47 +1170,47 @@
             },
             {
                 "primaryKey": [
-                    "scale"
-                ],
-                "value": "link",
-                "resources": [
-                    "ddf--entities--scale"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "unit"
-                ],
-                "value": "link",
-                "resources": [
-                    "ddf--entities--unit"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "scale"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--scale"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "unit"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--unit"
-                ]
-            },
-            {
-                "primaryKey": [
                     "country"
                 ],
                 "value": "weo_country_code",
                 "resources": [
                     "ddf--entities--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "scale"
+                ],
+                "value": "link",
+                "resources": [
+                    "ddf--entities--scale"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "scale"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--scale"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unit"
+                ],
+                "value": "link",
+                "resources": [
+                    "ddf--entities--unit"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unit"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--unit"
                 ]
             }
         ],
